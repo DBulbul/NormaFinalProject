@@ -54,11 +54,48 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 
 ![listcustomer](https://user-images.githubusercontent.com/97522259/171131761-2fa477e5-60d4-42d4-ac66-f16d1d9779c4.png)
 
-3. While updating customer, customer id should be entered. After, new address information should be registered. I have changed the address of first customer-Dilara Bülbül- whose id is equal to 1. The output of the table in H2 console can be also seen from the following; 
+3. While updating customer, customer id should be entered. After, new address information should be registered. I have changed the address of first customer-Dilara Bülbül- whose id is equal to 1. Updating operation is also possible for contact information. 
 ![address update](https://user-images.githubusercontent.com/97522259/171140062-190bd4dd-58cd-4e02-ab88-932c3533a519.png)
 
+4. Deleting operation is realized by customerid;however,before deleting , customer should fulfil the conditions. These conditions are;
+* Customer id should not be null,if customer id is absent, than the system gives "customer is not found" error-message. 
 
-![address update h2 console](https://user-images.githubusercontent.com/97522259/171141456-fb1b6a24-7319-4a0d-b019-83cb23ea3c93.jpg)
+ ´´´
+ @Override
+    public ResponseEntity<Object> deleteCustomer(long id) {
+        Customer customer = customerRepository.findById(id);
+
+        if (customer == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Customer is not found");
+        }
+        return isDeletable(customer);
+    }
+  
+  ´´´
+  
+* Customer should not have a credit card debt and balance on the account. 
+  
+  ´´´
+  ResponseEntity<Object> isDeletable(Customer customer) {
+
+        if (customer.getBalance()!=0) {
+            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have money on account.Deletion is not allowed");
+        }
+
+        for (int i = 0; i < customer.getCreditCards().size(); i++) {
+
+            double debt = customer.getCreditCards().get(i).getCardLimit() - customer.getCreditCards().get(i).getCardLimit();
+
+            if (debt != 0) {
+                return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have a credit debt.Deletion is not allowed");
+            }
+        }
+                                                             
+´´´
+                                                             
+
+
+
 
 
 
