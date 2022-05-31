@@ -63,10 +63,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 
  ´´´
  
- @Override
-    public ResponseEntity<Object> deleteCustomer(long id) {
-        Customer customer = customerRepository.findById(id);
-
+ 
         if (customer == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Customer is not found");
         }
@@ -81,8 +78,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
   
  
   ´´´
- 
-  ResponseEntity<Object> isDeletable(Customer customer) {
+
 
         if (customer.getBalance()!=0) {
             return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have money on account.Deletion is not allowed");
@@ -95,7 +91,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
             if (debt != 0) {
                 return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have a credit debt.Deletion is not allowed");
             }
-        }
+      
        
                                                              
 ´´´
