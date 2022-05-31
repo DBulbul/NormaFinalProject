@@ -43,9 +43,10 @@ All the functions that is mentioned above in detail should be implemented with u
 My entities for the customer managements are; Address,ContactInfo and Customer. Since each customer has one adress and one contact information, one to one relationship is designed while linking these tables. 
 
 Lets look at the endpoints which are created for deleting,updating and creating operations;
-![image](https://user-images.githubusercontent.com/97522259/171121436-db8c6dd5-1548-4401-8e8a-4fd0cabd4c64.png)
 
-While creating customer, if all the requirements are enabled(eg: name cannot be null or identity must be in 11 digits), then system output will be like following;
+![endpoints](https://user-images.githubusercontent.com/97522259/171125646-cb4e5be4-166f-4f57-91b2-30ba959abe71.png)
+
+While creating customer, if all the requirements are enabled(eg: name cannot be null or identity must be in 11 digits), then the message "Customer is created successfully" is given as output like following;
 ![image](https://user-images.githubusercontent.com/97522259/171125179-b8f3de37-fadc-4895-aaee-cf8415e1774f.png)
 
 
