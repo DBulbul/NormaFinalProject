@@ -43,7 +43,7 @@ All the functions that is mentioned above in detail should be implemented with u
 ### Customer Management Resolution
 My entities for the customer managements are; Address,ContactInfo and Customer. Since each customer has one adress and one contact information, one to one relationship is designed while linking these tables. 
 
-Lets look at the endpoints which are created for deleting,updating and creating operations;
+Let's look at the endpoints which are created for deleting,updating and creating operations;
 
 ![endpoints](https://user-images.githubusercontent.com/97522259/171125646-cb4e5be4-166f-4f57-91b2-30ba959abe71.png)
 
@@ -57,7 +57,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 3. While updating customer, customer id should be entered. Later, new address information should be registered. I have changed the address of first customer-Dilara Bülbül- whose id is equal to 1. Updating operation is also possible for contact information. 
 ![address update](https://user-images.githubusercontent.com/97522259/171140062-190bd4dd-58cd-4e02-ab88-932c3533a519.png)
 
-4. Deleting operation is realized by customerid; however, before deleting , customer should fulfil the conditions. These conditions are;
+4. Deletion operation is realized by customerid; however, before deleting , customer should fulfil the conditions. These conditions are;
 * Customer id should not be null, if customer id is absent, then the system gives "customer is not found" as error-message. 
 
 
