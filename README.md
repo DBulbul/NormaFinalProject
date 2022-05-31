@@ -33,7 +33,8 @@ All the functions that is mentioned above in detail should be implemented with u
 
 1. Project is designed using following packaging system;
 
-![packaging](https://user-images.githubusercontent.com/97522259/171120033-2f3dcb07-b252-4167-b106-4070267de1c2.jpg)
+![packaging](https://user-images.githubusercontent.com/97522259/171135080-2008210c-c644-4d6f-a59e-d939aa1dd892.jpg)
+
 
 2. Entities are created like following diagram;
 
