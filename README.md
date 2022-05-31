@@ -14,7 +14,7 @@ That is the final project which consists of the backend part of the bank applica
 Thanks to APIs,creating customer, updating customer and deleting customer should be realized. For the customer which has money on the account or which has loan for credit card,deleting should not be possible. 
 
 ### Account Management
-Customers can create 2 types of account;checking account and deposit account for controlling their investments.Deleting these accounts also should be possible with APIs. Transaction between with these accounts should be provided;however, deposit account cannot make transaction. Accounts can be openned with TL,Euro or Dolar currencies.
+Customers can create 2 types of account;checking account and deposit account for controlling their investments. Deleting these accounts also should be possible with APIs. Transaction between with these accounts should be provided;however, deposit account cannot make transaction. Accounts can be openned with TL,Euro or Dolar currencies.
 
 ### Card Management
 The bank provides credit cards and debit cards for their customers. Opening these cards,binding up these cards with customers and collecting money while shopping should be handled with APIs.
@@ -96,7 +96,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 * If conditions are fulfilled. Then  deletion can be  realized. 
 ![deletion](https://user-images.githubusercontent.com/97522259/171145763-2f074d67-32eb-48e2-9e2b-3d1a8e611645.png)
                                            
-
+### Account Management Resolution
 
 
 
