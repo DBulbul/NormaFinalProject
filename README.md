@@ -1,5 +1,7 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7849702&assignment_repo_type=AssignmentRepo)
 # Norma Spring Boot Final Project
+<img width="680" alt="section-1-2x" src="https://user-images.githubusercontent.com/97522259/171113736-b7d79a56-2e18-40e5-b5a8-feb4709e9979.png">
+
 That is the final project which consists of the backend part of the bank application. Requirements and some of technical necessities are handled in detail like following;
 
 ## Requirements
