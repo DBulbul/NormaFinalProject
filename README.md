@@ -50,7 +50,8 @@ While creating customer, if all the requirements are enabled(eg: name cannot be 
 ![image](https://user-images.githubusercontent.com/97522259/171125179-b8f3de37-fadc-4895-aaee-cf8415e1774f.png)
 
 Look at the output while listing all customer;
-![image](https://user-images.githubusercontent.com/97522259/171131450-60f8a9a5-52d9-472c-a74d-537aadb1d291.png)
+
+![listcustomer](https://user-images.githubusercontent.com/97522259/171131761-2fa477e5-60d4-42d4-ac66-f16d1d9779c4.png)
 
 
 
