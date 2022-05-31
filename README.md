@@ -54,7 +54,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 
 ![listcustomer](https://user-images.githubusercontent.com/97522259/171131761-2fa477e5-60d4-42d4-ac66-f16d1d9779c4.png)
 
-3. While updating customer, customer id should be entered. After, new address information should be registered. I have changed the address of first customer-Dilara Bülbül- whose id is equal to 1. Updating operation is also possible for contact information. 
+3. While updating customer, customer id should be entered. Later, new address information should be registered. I have changed the address of first customer-Dilara Bülbül- whose id is equal to 1. Updating operation is also possible for contact information. 
 ![address update](https://user-images.githubusercontent.com/97522259/171140062-190bd4dd-58cd-4e02-ab88-932c3533a519.png)
 
 4. Deleting operation is realized by customerid; however, before deleting , customer should fulfil the conditions. These conditions are;
