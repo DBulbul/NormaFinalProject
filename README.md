@@ -60,7 +60,9 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 4. Deleting operation is realized by customerid;however,before deleting , customer should fulfil the conditions. These conditions are;
 * Customer id should not be null,if customer id is absent, than the system gives "customer is not found" error-message. 
 
+
  ´´´
+ 
  @Override
     public ResponseEntity<Object> deleteCustomer(long id) {
         Customer customer = customerRepository.findById(id);
@@ -71,11 +73,15 @@ Lets look at the endpoints which are created for deleting,updating and creating 
         return isDeletable(customer);
     }
   
+ 
   ´´´
   
+ 
 * Customer should not have a credit card debt and balance on the account. 
   
+ 
   ´´´
+ 
   ResponseEntity<Object> isDeletable(Customer customer) {
 
         if (customer.getBalance()!=0) {
@@ -90,6 +96,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
                 return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have a credit debt.Deletion is not allowed");
             }
         }
+       
                                                              
 ´´´
                                                              
