@@ -68,7 +68,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
         return isDeletable(customer);
     }
   
-´´´
+```
   
  
 * Customer should not have a credit card debt and balance on the account. 
@@ -86,7 +86,8 @@ Lets look at the endpoints which are created for deleting,updating and creating 
             if (debt != 0) {
                 return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have a credit debt.Deletion is not allowed");
             }
-     ´´´
+            
+       ```
 
 
 
