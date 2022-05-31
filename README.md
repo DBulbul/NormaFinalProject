@@ -61,7 +61,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 * Customer id should not be null, if customer id is absent, then the system gives "customer is not found" as error-message. 
 
 
- ´´´
+```
   
         if (customer == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Customer is not found");
@@ -70,13 +70,13 @@ Lets look at the endpoints which are created for deleting,updating and creating 
     }
   
  
-  ´´´
+```
   
  
 * Customer should not have a credit card debt and balance on the account. 
   
  
-  ´´´
+  ```
   
   
         if (customer.getBalance()!=0) {
@@ -92,7 +92,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
             }
                
                
-´´´
+```
 * If conditions are fulfilled. Then  deletion can be  realized. 
 ![deletion](https://user-images.githubusercontent.com/97522259/171145763-2f074d67-32eb-48e2-9e2b-3d1a8e611645.png)
                                            
