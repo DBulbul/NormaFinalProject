@@ -29,7 +29,7 @@ Transactions operations should be handled only via IBANs.
 ## Technical Requirements
 All the functions that is mentioned above in detail should be implemented with using Java and Spring Boot. While implementing, OOP Principles,clean code, and SOLID Principles should be taken into consideration. Swagger can be used for documenting Rest APIs. Exception handling and responses to the possible errors should be also implemented. Unit Tests should be added.
 
-# Resolution of the Project
+## Resolution of the Project
 
 1. Project is designed using following packaging system;
 
@@ -38,3 +38,16 @@ All the functions that is mentioned above in detail should be implemented with u
 2. Entities are created like following diagram;
 
 ![diagram](https://user-images.githubusercontent.com/97522259/171120346-2d851157-fabb-49a1-bbe2-675179ea084d.png)
+
+### Customer Management Resolution
+My entities for the customer managements are; Address,ContactInfo and Customer. Since each customer has one adress and one contact information, one to one relationship is designed while linking these tables. 
+
+Lets look at the endpoints which are created for deleting,updating and creating operations;
+![image](https://user-images.githubusercontent.com/97522259/171121436-db8c6dd5-1548-4401-8e8a-4fd0cabd4c64.png)
+
+While creating customer, if all the requirements are enabled(eg: name cannot be null or identity must be in 11 digits), then system output will be like following;
+![image](https://user-images.githubusercontent.com/97522259/171125179-b8f3de37-fadc-4895-aaee-cf8415e1774f.png)
+
+
+
+
