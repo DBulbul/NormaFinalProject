@@ -57,13 +57,12 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 3. While updating customer, customer id should be entered. After, new address information should be registered. I have changed the address of first customer-Dilara Bülbül- whose id is equal to 1. Updating operation is also possible for contact information. 
 ![address update](https://user-images.githubusercontent.com/97522259/171140062-190bd4dd-58cd-4e02-ab88-932c3533a519.png)
 
-4. Deleting operation is realized by customerid;however,before deleting , customer should fulfil the conditions. These conditions are;
-* Customer id should not be null,if customer id is absent, than the system gives "customer is not found" error-message. 
+4. Deleting operation is realized by customerid; however, before deleting , customer should fulfil the conditions. These conditions are;
+* Customer id should not be null, if customer id is absent, than the system gives "customer is not found" as error-message. 
 
 
  ´´´
- 
- 
+  
         if (customer == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Customer is not found");
         }
@@ -78,8 +77,6 @@ Lets look at the endpoints which are created for deleting,updating and creating 
   
  
   ´´´
-
-
         if (customer.getBalance()!=0) {
             return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have money on account.Deletion is not allowed");
         }
@@ -91,11 +88,13 @@ Lets look at the endpoints which are created for deleting,updating and creating 
             if (debt != 0) {
                 return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have a credit debt.Deletion is not allowed");
             }
-      
-       
-                                                             
+                                                                
 ´´´
-                                                             
+* If conditions are fulfilled. Than  deletion can be  realized. 
+
+
+ ![deletion](https://user-images.githubusercontent.com/97522259/171145763-2f074d67-32eb-48e2-9e2b-3d1a8e611645.png)
+                                           
 
 
 
