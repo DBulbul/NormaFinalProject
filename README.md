@@ -49,6 +49,8 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 While creating customer, if all the requirements are enabled(eg: name cannot be null or identity must be in 11 digits), then the message "Customer is created successfully" is given as output like following;
 ![image](https://user-images.githubusercontent.com/97522259/171125179-b8f3de37-fadc-4895-aaee-cf8415e1774f.png)
 
+Look at the output while listing all customer;
+![image](https://user-images.githubusercontent.com/97522259/171131450-60f8a9a5-52d9-472c-a74d-537aadb1d291.png)
 
 
 
