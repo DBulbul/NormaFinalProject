@@ -88,7 +88,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
             }
      
 
-* If conditions are fulfilled. Then  deletion can be  realized. 
+* If conditions are fulfilled, then  deletion can be  realized. 
 ![deletion](https://user-images.githubusercontent.com/97522259/171145763-2f074d67-32eb-48e2-9e2b-3d1a8e611645.png)
                                            
 ### Account Management Resolution
