@@ -62,22 +62,19 @@ Lets look at the endpoints which are created for deleting,updating and creating 
 
 
 ```
-  
-        if (customer == null) {
+          if (customer == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Customer is not found");
         }
         return isDeletable(customer);
     }
   
- 
-```
+´´´
   
  
 * Customer should not have a credit card debt and balance on the account. 
   
  
-  ```
-  
+     ```
           if (customer.getBalance()!=0) {
             return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have money on account.Deletion is not allowed");
         }
@@ -89,9 +86,7 @@ Lets look at the endpoints which are created for deleting,updating and creating 
             if (debt != 0) {
                 return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have a credit debt.Deletion is not allowed");
             }
-     
-```
-
+     ´´´
 
 
 
