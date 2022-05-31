@@ -29,3 +29,12 @@ Transactions operations should be handled only via IBANs.
 ## Technical Requirements
 All the functions that is mentioned above in detail should be implemented with using Java and Spring Boot. While implementing, OOP Principles,clean code, and SOLID Principles should be taken into consideration. Swagger can be used for documenting Rest APIs. Exception handling and responses to the possible errors should be also implemented. Unit Tests should be added.
 
+# Resolution of the Project
+
+1. Project is designed using following packaging system;
+
+![packaging](https://user-images.githubusercontent.com/97522259/171120033-2f3dcb07-b252-4167-b106-4070267de1c2.jpg)
+
+2. Entities are created like following diagram;
+
+![diagram](https://user-images.githubusercontent.com/97522259/171120346-2d851157-fabb-49a1-bbe2-675179ea084d.png)
