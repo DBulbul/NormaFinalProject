@@ -41,7 +41,7 @@ All the functions that is mentioned above in detail should be implemented with u
 ![diagram](https://user-images.githubusercontent.com/97522259/171120346-2d851157-fabb-49a1-bbe2-675179ea084d.png)
 
 ### Customer Management Resolution
-My entities for the customer managements are; Address,ContactInfo and Customer. Since each customer has one address and one contact information, one to one relationship is designed while linking these tables. 
+My entities for the customer managements are; Address,ContactInfo and Customer. Since each customer has one address and one contact information, OneToOne relationship is designed while linking these tables. Customer has also relationships between transaction,cards and accounts entities. Each customer can have many transactions,many cards and many accounts, thus OneToMany relationship is created. 
 
 Let's look at the endpoints which are created for deleting,updating and creating operations;
 
