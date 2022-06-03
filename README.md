@@ -76,7 +76,7 @@ Let's look at the endpoints which are created for deleting,updating and creating
  
      ```
           if (customer.getBalance()!=0) {
-            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have money on account.Deletion is not allowed");
+            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have money on account.Deleting is not acceptable");
         }
 
         for (int i = 0; i < customer.getCreditCards().size(); i++) {
@@ -84,7 +84,7 @@ Let's look at the endpoints which are created for deleting,updating and creating
             double debt = customer.getCreditCards().get(i).getCardLimit() - customer.getCreditCards().get(i).getCardLimit();
 
             if (debt != 0) {
-                return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have a credit debt.Deletion is not allowed");
+                return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer have creditcard debt.Deleting is not acceptable");
             }
      
 
