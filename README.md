@@ -108,14 +108,13 @@ Entities-created for the account management-are Account,Checking Account, Deposi
 
 ### Card Management Resolution
 Entities created for card management are Card,CreditCard and DebitCard. Credit Card is linked with Customer with OneToMany relationship and it is keeping as a list.
-DebitCard and CreditCard extends from Card Table. Debit Card is linked with Checking Account with OneToMany relationship. Deleting,creating and listing creditcards is also handled via APIs like following;
+DebitCard and CreditCard extends from Card Table. Debit Card is linked with Checking Account with OneToMany relationship. Deleting,creating and listing creditcard and debitCard is also handled via APIs. CreditCard endpoints are like following;
 
 ![creditcardendpoints](https://user-images.githubusercontent.com/97522259/172070468-97f43d9c-3eac-41c7-b55e-79dc2318ba80.png)
 
 * Creating Credit Card output is like following;
 
-![creditcardcontroller](https://user-images.githubusercontent.com/97522259/172071072-ccb1edbb-b339-4c49-b2fe-7b2491484979.png)
-
+![creditcardcontroller](https://user-images.githubusercontent.com/97522259/172071337-6f518123-a71b-4bb8-b01f-ef4c00732ad8.png)
 
 * Deleting Credit Card is not allowed for absent cardNumbers;
 
@@ -152,4 +151,8 @@ DebitCard and CreditCard extends from Card Table. Debit Card is linked with Chec
 
 ![carddeletion](https://user-images.githubusercontent.com/97522259/172071111-791065e0-cf70-4e4a-bec1-bead2f84e173.png)
 
+### Transaction Management Resolution
+Transaction From Account endpoint is like following;
+![transaction](https://user-images.githubusercontent.com/97522259/172072682-c80657f8-a270-4f41-ba4f-7e243736f249.png)
 
+This part of my project will be completed. I could not finish because of some valid excuses.
