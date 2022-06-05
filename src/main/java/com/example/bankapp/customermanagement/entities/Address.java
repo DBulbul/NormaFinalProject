@@ -22,8 +22,6 @@ public class Address {
     @Enumerated(EnumType.ORDINAL)
     private AddressType addressType;
 
-
-
     @OneToOne
     private Customer customer;
 }

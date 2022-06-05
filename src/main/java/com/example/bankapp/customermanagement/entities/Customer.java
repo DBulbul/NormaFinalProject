@@ -29,14 +29,13 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message="Please enter name ,name column cannot be null")
+    @Column(nullable = false)
     private String name;
 
-    @NotNull(message="Please enter lastname,last name cannot be null")
+    @Column(nullable = false)
     private String lastName;
 
-    @NotNull(message="Identity Number cannot be null")
-    @Size(min=11,max=11,message="Identity must to have 11 digits")
+    @Column(nullable = false)
     private Long identityNumber;
 
     private Long taxIdentificationNumber;

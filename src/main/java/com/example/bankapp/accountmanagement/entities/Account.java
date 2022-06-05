@@ -25,9 +25,7 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-
-    @NotNull(message="Account number cannot be null")
-    @Size(min=6,max=6,message="Account number should consists of 6 digits")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long accountNumber;
 
     @Pattern(regexp="^[a-zA-Z]+$")
@@ -35,12 +33,11 @@ public class Account {
 
     private long branchCode;
 
-    @NotNull(message="IBAN cannot be null")
-    @Pattern(regexp="^TR\\d{7}[0-9A-Z]{17}$")
+
     private String IBAN;
 
 
-    private double balance;
+    private float balance;
 
     private boolean isActive;
 
@@ -62,7 +59,7 @@ public class Account {
     @Enumerated(EnumType.ORDINAL)
     private CurrencyType currencyType;
 
-    @JsonIgnore
+
     @ManyToOne
     private Customer customer;
 

@@ -1,8 +1,11 @@
 package com.example.bankapp.customermanagement.service;
 
+import com.example.bankapp.customermanagement.dto.CustomerDTO;
 import com.example.bankapp.customermanagement.entities.Address;
 import com.example.bankapp.customermanagement.entities.ContactInfo;
 import com.example.bankapp.customermanagement.entities.Customer;
+import com.example.bankapp.customermanagement.exception.GeneralException;
+import com.example.bankapp.customermanagement.mapper.CustomerMapper;
 import com.example.bankapp.customermanagement.repositories.CustomerRepository;
 import com.example.bankapp.customermanagement.requests.CreateCustomerRequest;
 import com.example.bankapp.customermanagement.requests.UpdateAddressRequest;
@@ -18,14 +21,17 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerRepository customerRepository;
+    private final CustomerMapper customerMapper;
 
     @Override
-    public ResponseEntity<Object> create(CreateCustomerRequest request) throws Exception {
+    public ResponseEntity<Object> create(CreateCustomerRequest request) throws GeneralException {
         Customer customer = new Customer();
         customer.setName(request.getName());
         customer.setLastName((request.getLastname()));
         customer.setIdentityNumber(request.getIdentityNumber());
-        customer.setBalance(request.getBalance());
+        customer.setBirthdate(request.getBirthdate());
+        customer.setCompanyType(request.getCompanyType());
+
 
         Address address = new Address();
         address.setAddressType(request.getAddress().getAddressType());
@@ -47,11 +53,9 @@ public class CustomerServiceImpl implements CustomerService {
         customerRepository.save(customer);
         return ResponseEntity.status(HttpStatus.OK).body("Customer is created successfully");
     }
-
     @Override
-    public List<Customer> findAll() {
-
-        return customerRepository.findAll();
+    public List<CustomerDTO> findAll() {
+        return customerRepository.findAll().stream().map(customerMapper::toDto).toList();
     }
     @Override
     public ResponseEntity<Object> updateAddress (UpdateAddressRequest address,long id){
@@ -99,7 +103,7 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = customerRepository.findById(id);
 
         if (customer == null) {
-            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Customer is not found");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Customer is not found");
         }
         return isDeletable(customer);
     }
@@ -119,7 +123,7 @@ public class CustomerServiceImpl implements CustomerService {
             }
         }
         customerRepository.delete(customer);
-        return ResponseEntity.status(HttpStatus.OK).body("Customer is deleted succesfully");
+        return ResponseEntity.status(HttpStatus.OK).body("Customer is deleted successfully");
     }
     }
 

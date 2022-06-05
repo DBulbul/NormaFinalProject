@@ -1,6 +1,7 @@
 package com.example.bankapp.cardmanagement.entities;
 
 import com.example.bankapp.customermanagement.entities.Customer;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,5 +21,6 @@ public class CreditCard extends Card {
     private double cardBalance;
 
     @ManyToOne
+    @JsonIgnore
     private Customer customer;
 }

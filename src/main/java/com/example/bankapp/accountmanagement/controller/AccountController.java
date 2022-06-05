@@ -4,6 +4,7 @@ package com.example.bankapp.accountmanagement.controller;
 import com.example.bankapp.accountmanagement.entities.Account;
 import com.example.bankapp.accountmanagement.exception.AccountDeletionException;
 import com.example.bankapp.accountmanagement.requests.CreateCheckingAccountRequest;
+import com.example.bankapp.accountmanagement.requests.CreateDepositAccountRequest;
 import com.example.bankapp.accountmanagement.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -23,9 +24,13 @@ import java.util.stream.Collectors;
 
         private final AccountService accountService;
 
-        @PostMapping("/create")
-        public ResponseEntity<Object> create(@RequestBody CreateCheckingAccountRequest request) throws IOException{
-            return accountService.create(request);
+        @PostMapping("/create/checking-account")
+        public ResponseEntity<Object> create(@RequestBody CreateCheckingAccountRequest createCheckingAccountRequest) throws IOException{
+            return accountService.create(createCheckingAccountRequest);
+        }
+        @PostMapping("/create/deposit-account")
+        public ResponseEntity<Object> create(@RequestBody CreateDepositAccountRequest createDepositAccountRequest) throws IOException{
+            return accountService.create(createDepositAccountRequest);
         }
 
         @GetMapping(params = {"page","size"})

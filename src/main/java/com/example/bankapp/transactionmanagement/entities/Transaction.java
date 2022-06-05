@@ -31,6 +31,9 @@ public abstract class Transaction {
     @Column(name = "amount")
     private double amount;
 
+    @Enumerated(EnumType.ORDINAL)
+    private TransactionType transactionType;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date transactionDate;
 
@@ -39,16 +42,5 @@ public abstract class Transaction {
 
     @ManyToOne
     private Account account;
-
-    @Override
-    public String toString() {
-        return "Transaction{" +
-                "id=" + id +
-                ", transactionDate=" + transactionDate +
-                ", description='" + description + '\'' +
-                ", amount=" + amount +
-                ", Account=" + account +
-                '}';
-    }
 
 }
