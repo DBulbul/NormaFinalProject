@@ -129,7 +129,7 @@ DebitCard and CreditCard extends from Card Table. Debit Card is linked with Chec
     double debt = creditCard.getCardLimit() - creditCard.getCardBalance();
 
         if (debt != 0) {
-            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Credit card have a debt.Deletion is not allowed.");
+            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Credit card has a debt.Deletion is not acceptable");
         }
         
 ```
