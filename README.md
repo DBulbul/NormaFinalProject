@@ -115,23 +115,30 @@ DebitCard and CreditCard extends from Card Table. Debit Card is linked with Chec
 * Deleting Credit Card is not allowed for absent cardNumbers;
 
 ´´´
-if (creditCard == null) {
+ if (creditCard == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Credit card is not found");
         }
+
+
+´´´
 
 * Deleting is also not possible for card with has debt.
 
 ´´´
+
     double debt = creditCard.getCardLimit() - creditCard.getCardBalance();
 
         if (debt != 0) {
             return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Credit card have a debt.Deletion is not allowed.");
         }
         
+´´´
+
 * If the conditions are fulfilled,
 
+
 ´´´
-creditCardRepository.delete(creditCard);
+        creditCardRepository.delete(creditCard);
         return ResponseEntity.status(HttpStatus.OK).body("Credit card is deleted");
 
 
