@@ -146,6 +146,7 @@ DebitCard and CreditCard extends from Card Table. Debit Card is linked with Chec
         creditCardRepository.delete(creditCard);
         return ResponseEntity.status(HttpStatus.OK).body("Credit card is deleted");
 
+```
 
 * Deleting operation output for the null cardNumber;
 
