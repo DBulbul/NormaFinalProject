@@ -33,8 +33,9 @@ All the functions that is mentioned above in detail should be implemented with u
 
 1. Project is designed using following packaging system;
 
-![packaging](https://user-images.githubusercontent.com/97522259/171135080-2008210c-c644-4d6f-a59e-d939aa1dd892.jpg)
+![packaging](https://user-images.githubusercontent.com/97522259/172070165-a3d7af9b-b19d-4fd1-8e77-f00649198266.png)
 
+Each management package has own controller,services,repositories, entities etc.
 
 2. Entities are created like following diagram;
 
@@ -92,7 +93,46 @@ Let's look at the endpoints which are created for deleting,updating and creating
 ![deletion](https://user-images.githubusercontent.com/97522259/171145763-2f074d67-32eb-48e2-9e2b-3d1a8e611645.png)
                                            
 ### Account Management Resolution
+Entities-created for the account management-are Account,Checking Account, Deposit Account and Currency. As it is already defined in the project definition,customer can have 2 types of account; checking and deposit account. Deleting,creating and listing all accounts operations are possible with following endpoints;
 
+![AccountController](https://user-images.githubusercontent.com/97522259/172068723-8fefbbc9-e6e2-432f-9830-76e19c271f5f.png)
+
+* Creating checking account output is like following;
+
+![checkingaccountcreate](https://user-images.githubusercontent.com/97522259/172068767-5bdbd6a5-6e85-41d0-9196-4c20024e0997.png)
+
+* Deleting account operation's logic is same with the deleting customer, deletion is not allowed for accounts which have balance that is different than zero. 
+
+* Listing all the accounts is also possible. With limiting page and size, accounts can be listed. 
+
+
+### Card Management Resolution
+Entities created for card management are Card,CreditCard and DebitCard. Credit Card is linked with Customer with OneToMany relationship and it is keeping as a list.
+DebitCard and CreditCard extends from Card Table. Debit Card is linked with Checking Account with OneToMany relationship. Deleting,creating and listing creditcards is also handled via APIs like following;
+
+![creditcardendpoints](https://user-images.githubusercontent.com/97522259/172070468-97f43d9c-3eac-41c7-b55e-79dc2318ba80.png)
+
+* Deleting Credit Card is not allowed for absent cardNumbers;
+
+´´´
+if (creditCard == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Credit card is not found");
+        }
+
+* Deleting is also not possible for card with has debt.
+
+´´´
+    double debt = creditCard.getCardLimit() - creditCard.getCardBalance();
+
+        if (debt != 0) {
+            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Credit card have a debt.Deletion is not allowed.");
+        }
+        
+* If the conditions are fulfilled,
+
+´´´
+creditCardRepository.delete(creditCard);
+        return ResponseEntity.status(HttpStatus.OK).body("Credit card is deleted");
 
 
 
