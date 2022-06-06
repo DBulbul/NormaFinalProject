@@ -101,7 +101,7 @@ Entities-created for the account management-are Account,Checking Account, Deposi
 
 ![checkingaccountcreate](https://user-images.githubusercontent.com/97522259/172068767-5bdbd6a5-6e85-41d0-9196-4c20024e0997.png)
 
-* Deleting account operation's logic is same with the deleting customer, deletion is not allowed for accounts which have balance that is different than zero.
+* Deleting account operation's logic is same with deleting customer, deletion is not allowed for accounts which have balance that is different than zero.
 
 * Listing all the accounts is also possible. With limiting page and size, accounts can be listed.
 
@@ -126,7 +126,7 @@ DebitCard and CreditCard extends from Card Table. Debit Card is linked with Chec
 
 ```
 
-* Deleting is also not possible for card with has debt.
+* Deleting is not possible for card with has debt.
 
 ```
 
