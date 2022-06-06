@@ -35,11 +35,19 @@ All the functions that is mentioned above in detail should be implemented with u
 
 ![packaging](https://user-images.githubusercontent.com/97522259/172070165-a3d7af9b-b19d-4fd1-8e77-f00649198266.png)
 
-Each management package has own controller,services,repositories, entities etc.
+Each management package consists of own controller,services,repositories, entities etc.
 
 2. Entities are created like following diagram;
 
 ![diagram](https://user-images.githubusercontent.com/97522259/171120346-2d851157-fabb-49a1-bbe2-675179ea084d.png)
+
+3. H2 is the tool that is used for database. To run H2 console;
+
+http://localhost:8080/h2-console
+
+4. Swagger is another tool that is used for developing the project. To run swagger;
+
+http://localhost:8080/swagger-ui/index.html
 
 ### Customer Management Resolution
 My entities for the customer managements are; Address,ContactInfo and Customer. Since each customer has one address and one contact information, OneToOne relationship is designed while linking these tables. Customer has also relationships between transaction,cards and accounts entities. Each customer can have many transactions,many cards and many accounts, thus OneToMany relationship is created.
