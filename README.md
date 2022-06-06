@@ -39,7 +39,8 @@ Each management package consists of own controller,services,repositories, entiti
 
 2. Entities are created like following diagram;
 
-![diagram](https://user-images.githubusercontent.com/97522259/171120346-2d851157-fabb-49a1-bbe2-675179ea084d.png)
+![diagramlast](https://user-images.githubusercontent.com/97522259/172111637-82b431af-86f4-4fee-a970-931971b58a3f.png)
+
 
 3. H2 is the tool that is used for database. To run H2 console;
 
