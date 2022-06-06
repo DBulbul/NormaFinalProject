@@ -155,7 +155,7 @@ DebitCard and CreditCard extends from Card Table. Debit Card is linked with Chec
 Transaction From Account endpoint is like following;
 ![transaction](https://user-images.githubusercontent.com/97522259/172072682-c80657f8-a270-4f41-ba4f-7e243736f249.png)
 
-This part of my project will be completed later. I could not finish because of some of valid excuses.
+This part of my project will be completed later. 
 
 
 
