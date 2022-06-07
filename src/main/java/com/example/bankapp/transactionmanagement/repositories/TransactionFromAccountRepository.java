@@ -12,5 +12,5 @@ import java.util.List;
 
 @Repository
 public interface TransactionFromAccountRepository extends JpaRepository<TransactionFromAccount,Long> {
-    TransactionFromAccount findByIBAN(long IBAN);
+
 }
